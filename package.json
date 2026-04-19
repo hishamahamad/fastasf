@@ -1,0 +1,31 @@
+{
+  "name": "@fastasf/vite-plugin",
+  "version": "0.1.0",
+  "description": "A ruthlessly opinionated Vite plugin that forces you to ship fast frontends.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hishamahamad/fastasf.git"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "performance",
+    "performance-budget",
+    "bundle-size",
+    "web-performance",
+    "frontend",
+    "optimization",
+    "core-web-vitals",
+    "lighthouse"
+  ],
+  "author": "Hisham Ahamad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hishamahamad/fastasf/issues"
+  },
+  "homepage": "https://github.com/hishamahamad/fastasf#readme"
+}
