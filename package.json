@@ -2,10 +2,6 @@
   "name": "@fastasf/vite-plugin",
   "version": "0.1.0",
   "description": "A ruthlessly opinionated Vite plugin that forces you to ship fast frontends.",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "vitest"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hishamahamad/fastasf.git"
@@ -27,5 +23,21 @@
   "bugs": {
     "url": "https://github.com/hishamahamad/fastasf/issues"
   },
-  "homepage": "https://github.com/hishamahamad/fastasf#readme"
+  "homepage": "https://github.com/hishamahamad/fastasf#readme",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0 || ^6.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest"
+  },
+  "packageManager": "pnpm@10.33.0"
 }

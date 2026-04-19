@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    // What JS version to output. ES2022 gives you top-level await,
+    // Object.hasOwn, Array.at() — all safe in Node 18+
+    // which is Vite's minimum anyway
+    "target": "ES2022",
+
+    // Output format. ESNext because your package.json
+    // says "type": "module" — you're shipping ESM
+    "module": "ESNext",
+
+    // How TS resolves imports. "bundler" understands
+    // package.json "exports", index files, and .ts extensions
+    // without needing .js in your import paths.
+    // Perfect for libraries consumed by bundlers like Vite
+    "moduleResolution": "bundler",
+
+    // Emit .d.ts files so consumers get type hints
+    // when they install your plugin
+    "declaration": true,
+
+    // Maps .d.ts back to your .ts source — helps
+    // consumers "go to definition" into your actual code
+    "declarationMap": true,
+
+    // Source maps for debugging
+    "sourceMap": true,
+
+    // Where compiled JS goes
+    "outDir": "dist",
+
+    // Where your source lives — keeps dist/ structure
+    // mirroring src/ without the src/ prefix
+    "rootDir": "src",
+
+    // The strictness flags — all of them at once.
+    // strict null checks, no implicit any, etc.
+    // You're building a tool that yells at people
+    // for bad code, yours should be bulletproof
+    "strict": true,
+
+    // Lets you import CommonJS modules cleanly
+    // with default imports instead of * as
+    "esModuleInterop": true,
+
+    // Skip type checking node_modules.
+    // Speeds up compilation, avoids fighting
+    // third-party type issues
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "test"]
+}
