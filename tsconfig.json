@@ -5,6 +5,10 @@
     // which is Vite's minimum anyway
     "target": "ES2022",
 
+    // This tells TypeScript to include Node's type definitions globally 
+    // so node:fs, node:path, and node:module resolve properly
+    "types": ["node"],
+
     // Output format. ESNext because your package.json
     // says "type": "module" — you're shipping ESM
     "module": "ESNext",
