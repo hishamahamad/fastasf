@@ -12,8 +12,12 @@ type Bundle = Record<string, { type: string } & Record<string, unknown>>
 // --- Helpers ---
 
 function extractPackageName(moduleId: string): string | null {
-  const match = moduleId.match(/node_modules\/(@[^/]+\/[^/]+|[^@/][^/]*)/)
-  return match ? match[1] : null
+  // In pnpm, module IDs look like:
+  // /project/node_modules/.pnpm/moment@2.30.1/node_modules/moment/moment.js
+  // We need the last node_modules/ segment, skipping dot-prefixed entries like .pnpm
+  const matches = [...moduleId.matchAll(/node_modules\/(@[^/]+\/[^/]+|[^@./][^/]*)/g)]
+  if (!matches.length) return null
+  return matches[matches.length - 1][1]
 }
 
 function parseVersion(raw: string): { major: number; minor: number; patch: number } | null {
