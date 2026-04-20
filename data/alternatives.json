@@ -1,1 +1,127 @@
-[]
+{
+  "moment": {
+    "alternative": "dayjs",
+    "alternativeSize": "2kb",
+    "savings": "66kb"
+  },
+  "lodash": {
+    "alternative": "lodash-es or native methods",
+    "alternativeSize": "tree-shakeable",
+    "savings": "up to 72kb"
+  },
+  "lodash.merge": {
+    "alternative": "structuredClone + spread",
+    "alternativeSize": "0kb",
+    "savings": "5kb"
+  },
+  "chart.js": {
+    "alternative": "uPlot",
+    "alternativeSize": "8kb",
+    "savings": "57kb"
+  },
+  "axios": {
+    "alternative": "ky or native fetch",
+    "alternativeSize": "3kb",
+    "savings": "11kb"
+  },
+  "uuid": {
+    "alternative": "crypto.randomUUID()",
+    "alternativeSize": "0kb",
+    "savings": "4kb"
+  },
+  "underscore": {
+    "alternative": "native methods",
+    "alternativeSize": "0kb",
+    "savings": "25kb"
+  },
+  "jquery": {
+    "alternative": "native DOM APIs",
+    "alternativeSize": "0kb",
+    "savings": "87kb"
+  },
+  "numeral": {
+    "alternative": "Intl.NumberFormat",
+    "alternativeSize": "0kb",
+    "savings": "16kb"
+  },
+  "classnames": {
+    "alternative": "clsx",
+    "alternativeSize": "0.5kb",
+    "savings": "1kb"
+  },
+  "node-fetch": {
+    "alternative": "native fetch (Node 18+)",
+    "alternativeSize": "0kb",
+    "savings": "12kb"
+  },
+  "isomorphic-fetch": {
+    "alternative": "native fetch",
+    "alternativeSize": "0kb",
+    "savings": "3kb"
+  },
+  "cross-fetch": {
+    "alternative": "native fetch",
+    "alternativeSize": "0kb",
+    "savings": "3kb"
+  },
+  "left-pad": {
+    "alternative": "String.prototype.padStart()",
+    "alternativeSize": "0kb",
+    "savings": "1kb"
+  },
+  "is-number": {
+    "alternative": "typeof x === 'number'",
+    "alternativeSize": "0kb",
+    "savings": "1kb"
+  },
+  "is-plain-object": {
+    "alternative": "typeof x === 'object' && x?.constructor === Object",
+    "alternativeSize": "0kb",
+    "savings": "1kb"
+  },
+  "date-fns": {
+    "alternative": "dayjs or Temporal API",
+    "alternativeSize": "2kb",
+    "savings": "tree-shake or replace"
+  },
+  "luxon": {
+    "alternative": "dayjs",
+    "alternativeSize": "2kb",
+    "savings": "20kb"
+  },
+  "request": {
+    "alternative": "native fetch",
+    "alternativeSize": "0kb",
+    "savings": "48kb"
+  },
+  "bluebird": {
+    "alternative": "native Promise",
+    "alternativeSize": "0kb",
+    "savings": "18kb"
+  },
+  "async": {
+    "alternative": "Promise.all / async-await",
+    "alternativeSize": "0kb",
+    "savings": "7kb"
+  },
+  "validator": {
+    "alternative": "valibot or native regex",
+    "alternativeSize": "3kb",
+    "savings": "50kb"
+  },
+  "highlight.js": {
+    "alternative": "shiki",
+    "alternativeSize": "lazy-loadable",
+    "savings": "varies"
+  },
+  "crypto-js": {
+    "alternative": "Web Crypto API",
+    "alternativeSize": "0kb",
+    "savings": "35kb"
+  },
+  "animate.css": {
+    "alternative": "CSS @keyframes or Web Animations API",
+    "alternativeSize": "0kb",
+    "savings": "80kb"
+  }
+}
